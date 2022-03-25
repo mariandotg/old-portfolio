@@ -1,7 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next';
+import { getContentfulData } from '../services/contentful';
 import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
 import { Data } from '../models/data';
-import { getContentfulData } from '../services/contentful';
+import About from '../components/About';
 
 interface Props {
   data: Data;
@@ -10,9 +11,7 @@ interface Props {
 const Home: NextPage<Props> = ({ data }) => {
   return (
     <div className='bg-red-600'>
-      <p>{data.about.title}</p>
-      <p>{data.projects.title}</p>
-      <p>{data.skills.title}</p>
+      <About data={data.about} />
     </div>
   );
 };
