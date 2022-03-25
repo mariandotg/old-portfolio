@@ -7,5 +7,5 @@ export const getContentfulData = () => {
   return client
     .getEntries()
     .then((response: any) => response.items)
-    .catch((error: any) => console.log(error));
+    .catch((error: object) => console.log(error));
 };
