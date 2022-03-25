@@ -1,6 +1,8 @@
 export interface AboutSection {
   title: string;
-  description: string;
+  description: {
+    paragraphs: string[];
+  };
   cta: string;
   slug: string;
 }
