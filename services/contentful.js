@@ -6,6 +6,6 @@ export const getContentfulData = () => {
   });
   return client
     .getEntries()
-    .then((response: any) => response.items)
-    .catch((error: any) => console.log(error));
+    .then((response) => response.items)
+    .catch((error) => console.log(error));
 };
