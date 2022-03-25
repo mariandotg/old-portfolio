@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "contentful": "^9.1.18",
     "eslint-config-prettier": "^8.5.0",
     "next": "12.1.0",
     "prettier": "^2.6.0",
