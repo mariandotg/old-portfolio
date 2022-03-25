@@ -1,37 +1,30 @@
 import type { GetStaticProps, NextPage } from 'next';
+import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
+import { Data } from '../models/data';
 import { getContentfulData } from '../services/contentful';
 
-interface DataModel {
-  fields: {
-    title: String;
-    projects: any;
-  };
-  metadata: any;
-  sys: any;
-}
-
 interface Props {
-  data: DataModel[];
+  data: Data;
 }
 
 const Home: NextPage<Props> = ({ data }) => {
   return (
     <div className='bg-red-600'>
-      {data.map((obj, index) => (
-        <p key={index}>{obj.fields.title}</p>
-      ))}
+      <p>{data.about.title}</p>
+      <p>{data.projects.title}</p>
+      <p>{data.skills.title}</p>
     </div>
   );
 };
 
-export default Home;
-
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await getContentfulData();
-
+  const response = await getContentfulData();
+  const data = contentfulDataAdapter(response);
   return {
     props: {
       data,
     },
   };
 };
+
+export default Home;
