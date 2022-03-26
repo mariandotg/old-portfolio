@@ -10,16 +10,15 @@ module.exports = {
         large: '8px',
       },
       colors: {
-        'lm-primary': {
-          100: '#7F47E7',
-          200: '#5B34B9',
-        },
-        'dm-primary': {
-          100: '#947EB0',
-          200: '#685896',
+        primary: {
+          light: '#7F47E7',
+          'light-hover': '#5B34B9',
+          dark: '#947EB0',
+          'dark-hover': '#685896',
         },
         background: {
-          100: '#E8E6F2',
+          light: '#E8E6F2',
+          dark: '#080C19',
         },
       },
       fontFamily: {
