@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { getContentfulData } from '../services/contentful';
-import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
 import { Data } from '../models/data';
+import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
+import useTheme from '../hooks/useTheme';
 import About from '../components/About';
 
 interface Props {
@@ -11,21 +11,7 @@ interface Props {
 }
 
 const Home: NextPage<Props> = ({ data }) => {
-  const [theme, setTheme] = useState(
-    typeof window !== 'undefined' ? localStorage.theme : 'dark'
-  );
-  const colorTheme = theme === 'dark' ? 'light' : 'dark';
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-
-    root.classList.remove(colorTheme);
-    root.classList.add(theme);
-
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', theme);
-    }
-  }, [theme, colorTheme]);
+  const { colorTheme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -34,11 +20,11 @@ const Home: NextPage<Props> = ({ data }) => {
       </Head>
       <div className='p-8'>
         {colorTheme === 'light' ? (
-          <button className='bg-white p-4' onClick={() => setTheme('light')}>
+          <button className='p-4 bg-white' onClick={toggleTheme}>
             change to light
           </button>
         ) : (
-          <button className='bg-white p-4' onClick={() => setTheme('dark')}>
+          <button className='p-4 bg-white' onClick={toggleTheme}>
             change to dark
           </button>
         )}
