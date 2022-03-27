@@ -12,14 +12,29 @@ module.exports = {
       colors: {
         primary: {
           light: '#7F47E7',
-          'light-hover': '#5B34B9',
           dark: '#947EB0',
+          'light-hover': '#5B34B9',
           'dark-hover': '#685896',
         },
-        background: {
-          light: '#E8E6F2',
-          dark: '#080C19',
+        button: {
+          'light-text': '#FFFFFF',
+          'dark-text': '#000000',
         },
+        card: {
+          light: '#FFFFFF',
+          dark: '#1D1D2F',
+          'light-text': '#000000',
+          'dark-text': '#FFFFFF',
+          'light-icons': '#000000',
+          'dark-icons': '#FFFFFF',
+        },
+        badge: {
+          light: '#3DDC97',
+          dark: '#3DDC97',
+        },
+        light: '#E8E6F2',
+        dark: '#080C19',
+        link: '#005FEE',
       },
       fontFamily: {
         bodySMono: ['Space Grotesk', 'sans-serif'],

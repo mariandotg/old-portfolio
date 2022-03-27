@@ -8,11 +8,11 @@ interface Props {
 const About = ({ data }: Props) => {
   return (
     <>
-      <div className='p-4 bg-white rounded-large flex flex-col gap-8 dark:bg-red-100'>
+      <div className='flex flex-col gap-8 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
         {data.description.paragraphs.map((p, index) => (
           <p key={index}>{p}</p>
         ))}
-        <Button variant='primary' label={data.cta} />
+        <Button variant='secondary' label={data.cta} />
       </div>
     </>
   );
