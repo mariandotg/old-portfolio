@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script src='/theme.js' strategy='beforeInteractive' />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
