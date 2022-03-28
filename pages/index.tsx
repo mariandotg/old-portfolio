@@ -3,8 +3,9 @@ import Head from 'next/head';
 import { getContentfulData } from '../services/contentful';
 import { Data } from '../models/data';
 import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
-import About from '../components/About';
 import ThemeButton from '../components/ThemeButton';
+import About from '../components/About';
+import Skills from '../components/Skills';
 
 interface Props {
   data: Data;
@@ -19,6 +20,7 @@ const Home: NextPage<Props> = ({ data }) => {
       <div className='p-8'>
         <ThemeButton />
         <About data={data.about} />
+        <Skills data={data.skills} />
       </div>
     </>
   );
