@@ -21,14 +21,18 @@ export interface ProjectsSection {
   slug: string;
 }
 
-export interface Tech {
+export interface TechInfo {
+  name: string;
+  iconPath: string;
+}
+export interface Specialization {
   title: string;
-  techs: string[];
+  techs: TechInfo[];
 }
 
 export interface SkillsSection {
   title: string;
-  techs: Tech[];
+  specializations: Specialization[];
 }
 
 export interface ContentfulResponse {
