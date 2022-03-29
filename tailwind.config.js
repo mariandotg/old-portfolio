@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        mobile: '375px',
+      },
       borderRadius: {
         large: '8px',
       },

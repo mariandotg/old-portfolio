@@ -1,5 +1,5 @@
 import { SkillsSection } from '../models/data';
-import SvgIcon from './SvgIcon';
+import Badge from './Badge';
 
 interface Props {
   data: SkillsSection;
@@ -17,19 +17,12 @@ const Skills = ({ data }: Props) => {
         {specializations.map((spec, index) => (
           <div
             key={index}
-            className='p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'
+            className='flex flex-col gap-4 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'
           >
             <h3 className='text-2xl font-bold'>{spec.title}</h3>
-            <ul>
+            <ul className='grid grid-cols-2 gap-4'>
               {spec.techs.map((tech, index) => (
-                <li key={index}>
-                  <SvgIcon
-                    path={tech.iconPath}
-                    classes='h-8 w-8 text-card-light-text dark:text-card-dark-text'
-                    themeSensitive
-                  />
-                  {tech.name}
-                </li>
+                <Badge key={index} tech={tech} />
               ))}
             </ul>
           </div>
