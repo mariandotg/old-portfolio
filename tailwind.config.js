@@ -9,6 +9,13 @@ module.exports = {
       screens: {
         mobile: '375px',
       },
+      fontSize: {
+        xs: ['12px', '12px'],
+        sm: ['16px', '16px'],
+        base: ['16px', '24px'],
+        'section-title': ['24px', '24px'],
+        'section-title-lg': ['28px', '28px'],
+      },
       borderRadius: {
         large: '8px',
       },
