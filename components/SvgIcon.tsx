@@ -3,9 +3,16 @@ interface Props {
   clickFunction?: () => void;
   path: string;
   fill?: string;
+  themeSensitive?: boolean;
 }
 
-const SvgIcon = ({ classes, path, clickFunction, fill }: Props) => {
+const SvgIcon = ({
+  classes,
+  path,
+  clickFunction,
+  fill,
+  themeSensitive,
+}: Props) => {
   return (
     <svg
       onClick={clickFunction}
@@ -15,7 +22,10 @@ const SvgIcon = ({ classes, path, clickFunction, fill }: Props) => {
       height='48px'
       viewBox='0 0 24 24'
     >
-      <path d={path} fill={fill} />
+      <path
+        d={path}
+        fill={!fill ? (themeSensitive ? 'currentColor' : '#000000') : fill}
+      />
     </svg>
   );
 };
