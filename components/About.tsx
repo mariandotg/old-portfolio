@@ -6,14 +6,16 @@ interface Props {
 }
 
 const About = ({ data }: Props) => {
+  const { description, cta } = data;
+
   return (
     <>
-      <div className='flex flex-col gap-8 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
-        {data.description.paragraphs.map((p, index) => (
-          <p key={index}>{p}</p>
+      <section className='flex flex-col gap-8 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
+        {description.map((p, index) => (
+          <p key={index}>{p.fields.text}</p>
         ))}
-        <Button variant='secondary' label={data.cta} />
-      </div>
+        <Button variant='primary' label={cta} />
+      </section>
     </>
   );
 };

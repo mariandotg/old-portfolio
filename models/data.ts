@@ -1,18 +1,32 @@
+export interface Paragraph {
+  fields: {
+    text: string;
+  };
+}
 export interface AboutSection {
   title: string;
-  description: {
-    paragraphs: string[];
-  };
+  description: Paragraph[];
   cta: string;
   slug: string;
 }
 
+export interface Image {
+  fields: {
+    title: string;
+    description: string;
+    file: {
+      url: string;
+    };
+  };
+}
 export interface Project {
-  title: string;
-  image: string;
-  repository: string;
-  site: string;
-  techs: string[];
+  fields: {
+    title: string;
+    image: Image;
+    repository: string;
+    site: string;
+    techs: string[];
+  };
 }
 
 export interface ProjectsSection {
@@ -21,23 +35,27 @@ export interface ProjectsSection {
   slug: string;
 }
 
-export interface TechInfo {
-  name: string;
-  iconPath: string;
+export interface Tech {
+  fields: {
+    title: string;
+    iconPath: string;
+  };
 }
 export interface Specialization {
-  title: string;
-  techs: TechInfo[];
+  fields: {
+    title: string;
+    skills: Tech[];
+  };
 }
 
 export interface SkillsSection {
   title: string;
   specializations: Specialization[];
+  slug: string;
 }
 
 export interface ContentfulResponse {
-  fields: object;
-  metadata: any;
+  fields: any;
   sys: any;
 }
 

@@ -7,7 +7,7 @@ interface Props {
 
 const Skills = ({ data }: Props) => {
   const { title, specializations } = data;
-  console.log(data);
+
   return (
     <>
       <section className='flex flex-col gap-4'>
@@ -20,9 +20,11 @@ const Skills = ({ data }: Props) => {
               key={index}
               className='flex flex-col gap-4 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'
             >
-              <h3 className='font-bold text-section-title'>{spec.title}</h3>
+              <h3 className='font-bold text-section-title'>
+                {spec.fields.title}
+              </h3>
               <ul className='grid grid-cols-2 gap-4'>
-                {spec.techs.map((tech, index) => (
+                {spec.fields.skills.map((tech, index) => (
                   <Badge key={index} tech={tech} />
                 ))}
               </ul>

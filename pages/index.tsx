@@ -17,7 +17,7 @@ const Home: NextPage<Props> = ({ data }) => {
       <Head>
         <link rel='icon' href='./favicon.ico' />
       </Head>
-      <div className='p-8'>
+      <div className='flex flex-col gap-8 p-8'>
         <ThemeButton />
         <About data={data.about} />
         <Skills data={data.skills} />
