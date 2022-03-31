@@ -6,6 +6,7 @@ import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
 import ThemeButton from '../components/ThemeButton';
 import About from '../components/About';
 import Skills from '../components/Skills';
+import Projects from '../components/Projects';
 
 interface Props {
   data: Data;
@@ -21,6 +22,7 @@ const Home: NextPage<Props> = ({ data }) => {
         <ThemeButton />
         <About data={data.about} />
         <Skills data={data.skills} />
+        <Projects data={data.projects} />
       </div>
     </>
   );
