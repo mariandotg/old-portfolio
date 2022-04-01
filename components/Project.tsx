@@ -1,6 +1,6 @@
 import { ProjectModel } from '../models/data';
 import Badge from './Badge';
-import SvgIcon from './SvgIcon';
+import ExternalLink from './ExternalLink';
 
 interface Props {
   project: ProjectModel;
@@ -27,26 +27,15 @@ const Project = ({ project }: Props) => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col gap-2 text-blue-600 underline font-bold'>
-          <div className='flex gap-2'>
-            <SvgIcon
-              classes='w-6 h-6 text-black dark:text-white'
-              preset='openInNew'
-              themeSensitive
-            />
-            <a href={project.fields.site}>{project.fields.site}</a>
-          </div>
-
-          <div className='flex gap-2'>
-            <SvgIcon
-              classes='w-6 h-6 text-black dark:text-white'
-              preset='github'
-              themeSensitive
-            />
-            <a className='w-min' href={project.fields.repository}>
-              {project.fields.repository}
-            </a>
-          </div>
+        <div className='flex flex-col gap-2'>
+          <ExternalLink
+            site={project.fields.site}
+            icon={{ preset: 'openInNew' }}
+          />
+          <ExternalLink
+            site={project.fields.repository}
+            icon={{ preset: 'github' }}
+          />
         </div>
       </div>
     </div>
