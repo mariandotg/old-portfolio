@@ -1,6 +1,6 @@
 import { ProjectModel } from '../models/data';
-import Badge from './Badge';
 import ExternalLink from './ExternalLink';
+import ProjectTechs from './ProjectTechs';
 
 interface Props {
   project: ProjectModel;
@@ -19,13 +19,7 @@ const Project = ({ project }: Props) => {
           <h3 className='font-bold text-section-title'>
             {project.fields.title}
           </h3>
-          <ul className='flex gap-2 flex-wrap'>
-            {project.fields.techs.map((tech, index) => (
-              <li key={index} className='flex'>
-                <Badge title={tech} />
-              </li>
-            ))}
-          </ul>
+          <ProjectTechs techs={project.fields.techs} />
         </div>
         <div className='flex flex-col gap-2'>
           <ExternalLink
