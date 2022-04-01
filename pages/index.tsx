@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { getContentfulData } from '../services/contentful';
-import { Data } from '../models/data';
+import { DataModel } from '../models/data';
 import contentfulDataAdapter from '../adapters/contentfulDataAdapter';
 import ThemeButton from '../components/ThemeButton';
 import About from '../components/About';
@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 
 interface Props {
-  data: Data;
+  data: DataModel;
 }
 
 const Home: NextPage<Props> = ({ data }) => {

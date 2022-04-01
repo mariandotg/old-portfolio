@@ -1,16 +1,16 @@
-export interface Paragraph {
+export interface ParagraphModel {
   fields: {
     text: string;
   };
 }
-export interface AboutSection {
+export interface AboutSectionModel {
   title: string;
-  description: Paragraph[];
+  description: ParagraphModel[];
   cta: string;
   slug: string;
 }
 
-export interface Image {
+export interface ImageModel {
   fields: {
     title: string;
     description: string;
@@ -19,38 +19,38 @@ export interface Image {
     };
   };
 }
-export interface Project {
+export interface ProjectModel {
   fields: {
     title: string;
-    image: Image;
+    image: ImageModel;
     repository: string;
     site: string;
     techs: string[];
   };
 }
 
-export interface ProjectsSection {
+export interface ProjectsSectionModel {
   title: string;
-  projects: Project[];
+  projects: ProjectModel[];
   slug: string;
 }
 
-export interface Tech {
+export interface TechModel {
   fields: {
     title: string;
     iconPath: string;
   };
 }
-export interface Specialization {
+export interface SpecializationModel {
   fields: {
     title: string;
-    skills: Tech[];
+    skills: TechModel[];
   };
 }
 
-export interface SkillsSection {
+export interface SkillsSectionModel {
   title: string;
-  specializations: Specialization[];
+  specializations: SpecializationModel[];
   slug: string;
 }
 
@@ -59,8 +59,8 @@ export interface ContentfulResponse {
   sys: any;
 }
 
-export interface Data {
-  about: AboutSection;
-  projects: ProjectsSection;
-  skills: SkillsSection;
+export interface DataModel {
+  about: AboutSectionModel;
+  projects: ProjectsSectionModel;
+  skills: SkillsSectionModel;
 }

@@ -1,8 +1,8 @@
-import { SkillsSection } from '../models/data';
-import Badge from './Badge';
+import { SkillsSectionModel } from '../models/data';
+import Tech from './Tech';
 
 interface Props {
-  data: SkillsSection;
+  data: SkillsSectionModel;
 }
 
 const Skills = ({ data }: Props) => {
@@ -25,7 +25,7 @@ const Skills = ({ data }: Props) => {
               </h3>
               <ul className='grid grid-cols-2 gap-4'>
                 {spec.fields.skills.map((tech, index) => (
-                  <Badge key={index} tech={tech} />
+                  <Tech key={index} tech={tech} />
                 ))}
               </ul>
             </div>

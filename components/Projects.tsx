@@ -1,11 +1,13 @@
-import { ProjectsSection } from '../models/data';
+import { ProjectsSectionModel } from '../models/data';
+import Badge from './Badge';
 
 interface Props {
-  data: ProjectsSection;
+  data: ProjectsSectionModel;
 }
 
 const Projects = ({ data }: Props) => {
   const { title, projects } = data;
+
   return (
     <>
       <section className='flex flex-col gap-4'>
@@ -25,13 +27,15 @@ const Projects = ({ data }: Props) => {
                   <h3 className='font-bold text-section-title'>
                     {project.fields.title}
                   </h3>
-                  <ul>
+                  <ul className='flex gap-2 flex-wrap'>
                     {project.fields.techs.map((tech, index) => (
-                      <p key={index}>{tech}</p>
+                      <li key={index} className='flex'>
+                        <Badge title={tech} />
+                      </li>
                     ))}
                   </ul>
                 </div>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 text-blue-600 underline font-bold'>
                   <a href={project.fields.site}>{project.fields.site}</a>
                   <a href={project.fields.repository}>
                     {project.fields.repository}

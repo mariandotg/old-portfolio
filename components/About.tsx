@@ -1,8 +1,8 @@
-import { AboutSection } from '../models/data';
+import { AboutSectionModel } from '../models/data';
 import Button from './Button';
 
 interface Props {
-  data: AboutSection;
+  data: AboutSectionModel;
 }
 
 const About = ({ data }: Props) => {
