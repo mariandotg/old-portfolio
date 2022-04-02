@@ -34,7 +34,9 @@ const SvgIcon = ({
     <svg
       onClick={clickFunction}
       xmlns='http://www.w3.org/2000/svg'
-      className={classes}
+      className={`${classes} ${
+        themeSensitive ? 'text-black dark:text-white' : ''
+      }`}
       width='48px'
       height='48px'
       viewBox='0 0 24 24'
