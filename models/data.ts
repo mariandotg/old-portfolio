@@ -54,6 +54,18 @@ export interface SkillsSectionModel {
   slug: string;
 }
 
+export interface socialMediaModel {
+  fields: {
+    title: string;
+    site: string;
+  };
+}
+export interface FooterModel {
+  title: string;
+  slug: string;
+  socialMedia: socialMediaModel[];
+}
+
 export interface ContentfulResponse {
   fields: any;
   sys: any;
@@ -63,4 +75,5 @@ export interface DataModel {
   about: AboutSectionModel;
   projects: ProjectsSectionModel;
   skills: SkillsSectionModel;
+  footer: FooterModel;
 }
