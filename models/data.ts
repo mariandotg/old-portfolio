@@ -62,8 +62,9 @@ export interface socialMediaModel {
 }
 export interface FooterModel {
   title: string;
-  slug: string;
   socialMedia: socialMediaModel[];
+  myName: string;
+  slug: string;
 }
 
 export interface ContentfulResponse {
