@@ -11,7 +11,7 @@ const Specialization = ({ specialization }: Props) => {
       <h3 className='font-bold text-section-title'>
         {specialization.fields.title}
       </h3>
-      <ul className='grid grid-cols-2 gap-4'>
+      <ul className='grid grid-cols-2 gap-4 lg:gap-x-8'>
         {specialization.fields.skills.map((tech, index) => (
           <Tech key={index} tech={tech} />
         ))}
