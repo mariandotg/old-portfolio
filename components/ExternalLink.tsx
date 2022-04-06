@@ -20,7 +20,10 @@ const ExternalLink = ({ site, label, icon }: Props) => {
           themeSensitive
         />
       )}
-      <a className='text-blue-600 underline font-bold break-all' href={site}>
+      <a
+        className='text-blue-600 underline font-bold break-all w-fit'
+        href={site}
+      >
         {!label ? site : label}
       </a>
     </div>
