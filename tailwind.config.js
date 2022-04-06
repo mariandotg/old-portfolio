@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        mobile: '375px',
+        mobile: '430px',
       },
       fontSize: {
-        xs: ['12px', '12px'],
+        xs: ['14px', '14px'],
         sm: ['16px', '16px'],
         base: ['16px', '24px'],
         'section-title': ['24px', '24px'],
