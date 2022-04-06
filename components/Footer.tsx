@@ -18,7 +18,11 @@ const Footer = ({ data }: Props) => {
           {data.socialMedia.map((e, index) => (
             <li key={index}>
               <a href={e.fields.site}>
-                <SvgIcon preset={e.fields.title.toLowerCase()} themeSensitive />
+                <SvgIcon
+                  preset={e.fields.title.toLowerCase()}
+                  classes='h-12 w-12'
+                  themeSensitive
+                />
               </a>
             </li>
           ))}
