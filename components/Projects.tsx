@@ -10,7 +10,7 @@ const Projects = ({ data }: Props) => {
 
   return (
     <>
-      <section className='flex flex-col gap-4'>
+      <section className='flex flex-col gap-4 md:col-span-12'>
         <h2 className='font-bold text-section-title text-card-light-text dark:text-card-dark-text'>
           {title}
         </h2>

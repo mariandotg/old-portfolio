@@ -7,7 +7,7 @@ interface Props {
 
 const Specialization = ({ specialization }: Props) => {
   return (
-    <div className='flex flex-col gap-4 p-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
+    <div className='flex flex-col gap-4 p-4 lg:p-6 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
       <h3 className='font-bold text-section-title'>
         {specialization.fields.title}
       </h3>
