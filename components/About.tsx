@@ -11,6 +11,7 @@ const About = ({ data }: Props) => {
   return (
     <>
       <section className='flex flex-col gap-8 p-4 lg:p-6 md:col-span-4 md:gap-4 bg-card-light rounded-large text-card-light-text dark:bg-card-dark dark:text-card-dark-text'>
+        <img className='rounded-large' src='/me.jpg' />
         {description.map((p, index) => (
           <p key={index}>{p.fields.text}</p>
         ))}
