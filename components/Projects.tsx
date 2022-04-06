@@ -14,7 +14,7 @@ const Projects = ({ data }: Props) => {
         <h2 className='font-bold text-section-title text-card-light-text dark:text-card-dark-text'>
           {title}
         </h2>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-8 md:gap-4 sm:grid lg:gap-8 sm:grid-cols-2 md:grid-cols-3'>
           {projects.map((project, index) => (
             <Project key={index} project={project} />
           ))}
