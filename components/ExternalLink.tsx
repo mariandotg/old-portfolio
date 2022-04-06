@@ -14,13 +14,13 @@ const ExternalLink = ({ site, label, icon }: Props) => {
     <div className='flex gap-2'>
       {icon && (
         <SvgIcon
-          classes='w-6 h-6 text-black dark:text-white'
+          classes='w-6 h-6 text-card-light-text dark:text-card-dark-text'
           preset={icon.preset ? icon.preset : undefined}
           path={icon.path ? icon.path : undefined}
           themeSensitive
         />
       )}
-      <a className='w-min text-blue-600 underline font-bold' href={site}>
+      <a className='text-blue-600 underline font-bold break-all' href={site}>
         {!label ? site : label}
       </a>
     </div>
