@@ -41,8 +41,6 @@ const SvgIcon = ({
       className={`${classes} ${
         themeSensitive ? 'text-black dark:text-white' : ''
       }`}
-      width='48px'
-      height='48px'
       viewBox='0 0 24 24'
     >
       <path
