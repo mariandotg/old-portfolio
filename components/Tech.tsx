@@ -11,7 +11,7 @@ const Tech = ({ tech }: Props) => {
     <li className='flex items-center gap-4'>
       <SvgIcon
         path={tech.fields.iconPath}
-        classes='hidden mobile:flex h-6 w-6 text-card-light-text dark:text-card-dark-text'
+        classes='hidden mobile:flex h-8 w-8 text-card-light-text dark:text-card-dark-text'
         themeSensitive
       />
       <Badge title={tech.fields.title} />
